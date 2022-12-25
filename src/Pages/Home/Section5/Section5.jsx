@@ -25,8 +25,53 @@ const Section5 = () => {
             className={(book?.add && !book?.paid) || "hidden"}
             key={book._id}
           >
-            <div>
-              <div className="max-w-lg overflow-hidden bg-white rounded-lg shadow-md bg-gray-800">
+            <div className="px-6">
+              <div className="md:w-[30rem] w-full border-2 border-b-4 border-gray-200 rounded-xl hover:bg-gray-50">
+                <p className="bg-sky-500 w-fit px-4 py-1 text-sm font-bold text-white rounded-tl-lg rounded-br-xl">
+                  {" "}
+                  SUPPER OFFER{" "}
+                </p>
+                <div className="grid grid-cols-6 p-5 gap-y-2">
+                  <div>
+                    <img
+                      alt=""
+                      src={book.image}
+                      className="w-16 h-16 object-cover rounded-full"
+                    />
+                  </div>
+                  {/* Description */}
+                  <div className="col-span-5 md:col-span-4 ml-4">
+                    <p className="text-sky-500 font-bold text-xs">
+                      {" "}
+                      20+ SPOTS LEFT{" "}
+                    </p>
+                    <p className="text-gray-600 font-bold">
+                      {" "}
+                      {book?.data?.name}
+                    </p>
+                    <p className="text-gray-400">
+                      {book?.date} . {book?.time}
+                    </p>
+                    <p title={book.name} className="text-gray-400">
+                      {" "}
+                      {book.name}
+                      {book.verify && (
+                        <GoVerified
+                          title="verified"
+                          className="text-xs inline ml-2"
+                        ></GoVerified>
+                      )}{" "}
+                    </p>
+                  </div>
+                  {/* Price */}
+                  <div className="flex col-start-2 ml-4 md:col-start-auto md:ml-0 md:justify-end">
+                    <p className="rounded-lg text-sky-500 font-bold bg-sky-100  py-1 px-3 text-sm w-fit h-fit">
+                      ${book?.data?.price}
+                    </p>
+                  </div>
+                </div>
+              </div>
+              {/* <div className="max-w-lg overflow-hidden bg-white rounded-lg shadow-md bg-gray-800">
                 <img
                   className="object-cover w-full h-64"
                   src={book.image}
@@ -64,7 +109,7 @@ const Section5 = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         ))}

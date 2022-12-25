@@ -43,19 +43,19 @@ const Item = ({ title, children }) => {
 
 export const Blog = () => {
   return (
-    <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-      <div class="max-w-xl sm:mx-auto lg:max-w-2xl">
-        <div class="flex flex-col mb-16 sm:text-center">
-          <div class="max-w-xl md:mx-auto sm:text-center lg:max-w-2xl">
-            <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
-              <span class="relative inline-block">
-                <span class="relative">FAQ</span>
+    <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+      <div className="max-w-xl sm:mx-auto lg:max-w-2xl">
+        <div className="flex flex-col mb-16 sm:text-center">
+          <div className="max-w-xl md:mx-auto sm:text-center lg:max-w-2xl">
+            <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
+              <span className="relative inline-block">
+                <span className="relative">FAQ</span>
               </span>{" "}
               Section
             </h2>
           </div>
         </div>
-        <div class="space-y-4">
+        <div className="space-y-4">
           <Item title="What are the different ways to manage a state in a React application?">
             1. Local (UI) state Local state is data we manage in one or another
             component. <br />

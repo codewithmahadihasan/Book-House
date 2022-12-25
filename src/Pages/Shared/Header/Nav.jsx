@@ -73,8 +73,6 @@ export const Nav = () => {
             <button
               onClick={() => logOut()}
               className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-purple-400 hover:bg-purple-700 focus:shadow-outline focus:outline-none"
-              aria-label="Sign up"
-              title="Sign up"
             >
               Log Out
             </button>
@@ -85,16 +83,12 @@ export const Nav = () => {
           <Link
             to="/login"
             className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-purple-400 hover:bg-purple-700 focus:shadow-outline focus:outline-none"
-            aria-label="Sign up"
-            title="Sign up"
           >
             Log in
           </Link>
           <Link
             to="/sign-up"
             className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-black transition duration-200 rounded shadow-md ml-4 bg-purple-400 hover:bg-purple-700 focus:shadow-outline focus:outline-none"
-            aria-label="Sign up"
-            title="Sign up"
           >
             Registration
           </Link>
@@ -109,8 +103,8 @@ export const Nav = () => {
         <div className="relative z-50 flex items-center justify-between">
           <Link
             to="/"
-            aria-label="Company"
-            title="Company"
+            aria-label="Home"
+            title="Home"
             className="inline-flex items-center gap-4"
           >
             <img className="w-12" src={icon} alt="" />

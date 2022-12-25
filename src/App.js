@@ -1,7 +1,7 @@
 import { RouterProvider } from 'react-router-dom';
 import router from './Routers/PublicRouter';
 import { useEffect, useState } from 'react';
-import Loading from './Pages/Shared/Loading/Loading.jsx';
+import Loader from './Pages/Shared/Loading/Loader';
 
 
 
@@ -19,7 +19,7 @@ function App() {
 
   return (
     <div   >
-      {sppin ? <Loading ></Loading> : <RouterProvider router={router}></RouterProvider>}
+      {sppin ? <Loader></Loader>: <RouterProvider router={router}></RouterProvider>}
     </div>
   );
 }

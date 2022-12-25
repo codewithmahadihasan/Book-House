@@ -132,9 +132,6 @@ const AuthProvider = ({ children }) => {
     };
   }, []);
 
-  if (loading) {
-    return <Loading></Loading>;
-  }
   const authInfo = {
     user,
     EmailWithLogin,
@@ -145,6 +142,8 @@ const AuthProvider = ({ children }) => {
     setSeller,
     side,
     setSide,
+    loading,
+    setLoading,
   };
 
   return (

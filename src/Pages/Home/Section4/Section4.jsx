@@ -3,16 +3,28 @@ import { Link } from "react-router-dom";
 
 const Section4 = () => {
   const [collections, setCollections] = useState([]);
+  const [load, setLoad] = useState();
+
   useEffect(() => {
+    setLoad(true);
     fetch("https://serversite-liart.vercel.app/catagorys")
       .then((res) => res.json())
-      .then((data) => setCollections(data));
-  }, []);
+      .then((data) => {
+        setCollections(data);
+        setLoad(false);
+      });
+  }, [setLoad]);
+  console.log(load);
+  if (load) {
+    <div className="bg-indigo-500 ... mx-auto">
+      <svg className="animate-spin h-5 w-5 mr-3 ..." viewBox="0 0 24 24"></svg>
+      Processing...
+    </div>;
+  }
 
   return (
-    <div className="bg-gray-300 py-20">
+    <div className="lg:px-28 py-20">
       <h1 className="text-5xl text-center pt-20 pb-10 font-bold  ">
-        {" "}
         Categorys{" "}
       </h1>
       <section className="p-6 mb-10  text-gray-100">
